@@ -21,3 +21,7 @@ body {
   {
     font-family: "Raleway", sans-serif;
   }
+
+  .seat {
+    cursor: pointer;
+  }
