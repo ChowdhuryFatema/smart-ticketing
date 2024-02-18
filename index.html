@@ -378,9 +378,6 @@
                   <input type="email" placeholder="Enter your email id" class="input input-bordered w-full " />
                 </div>
               </form>
-
-
-
               <!-- Open the modal using ID.showModal() method -->
               <button class="btn bg-green text-white hover:bg-lime-500 w-full rounded-xl text-lg mt-5" onclick="my_modal_5.showModal()">Next</button>
               <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle w-fu">
@@ -402,9 +399,9 @@
                  </div>
                 </div>
               </dialog>
-              <div class="flex flex-col md:flex-row justify-evenly">
-                  <button class="btn btn-link text-[#03071299]">Terms and Conditions</button>
-                  <button class="btn btn-link text-[#03071299]">Cancellation Policy</button>
+              <div class="flex flex-col md:flex-row justify-evenly mt-4">
+                  <button class="btn btn-link text-[#03071299] min-h-0 h-8">Terms and Conditions</button>
+                  <button class="btn btn-link text-[#03071299] min-h-0 h-8">Cancellation Policy</button>
                 </div>
             </div>
           </div>
@@ -413,8 +410,42 @@
     </section>
     <!-- paribahan section ends here  -->
   </main>
-  <footer>
-
+  <footer class="bg-[#030712]">
+    <div class="container mx-auto px-5 md:px-24 mt-5 py-16">
+      <div class="flex flex-col md:flex-row *:text-white justify-between">
+        <div class="space-y-5">
+          <h2 class="text-3xl font-bold">P-Ticket</h2>
+          <p class="opacity-70 text-sm">P-Ticket is a digital platform to make your <br> daily commuting better.</p>
+        </div>
+        <div class="space-y-5">
+          <h2>Download our app</h2>
+          <div style="width: fit-content;" class="flex gap-1 border rounded-md p-2">
+            <div>
+              <img src="images/playstore.png" alt="">
+            </div>
+            <div>
+              <p class="uppercase text-[12px]">get it on</p>
+              <p>Google Play</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-dashed border-[#FFFFFF4D] mt-10 mb-5"></div>
+      <div>
+        <div class="flex flex-col md:flex-row justify-between *:text-white">
+          <div>
+            <p class="opacity-70">@all rights reserved, P-Ticket services limited.2024</p>
+          </div>
+          <div>
+            <ul class="list-none *:md:inline *:md:ml-5">
+              <li>Terms & condition</li>
+              <li>Return & refund policy</li>
+              <li>Privacy policy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
   <script src="js/utility.js"></script>
   <script src="js/script.js"></script>

@@ -70,10 +70,7 @@ for( let seat of seats ){
             // get coupon field value
             const couponField = document.getElementById('coupon-field');
             const couponFieldValue = couponField.value;
-           
-            // if(couponFieldValue !== 'NEW15' || couponFieldValue !== 'Couple 20'){
-            //     return alert('Invalid Coupon');
-            // }
+          
 
             if( couponFieldValue === 'NEW15' ){
                 // 15% discount 
@@ -93,6 +90,7 @@ for( let seat of seats ){
                 couponContainer.classList.add('hidden');
                 discountContainer.classList.remove('hidden');
             }
+
         })
 
     })
