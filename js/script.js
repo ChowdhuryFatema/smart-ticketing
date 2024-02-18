@@ -6,8 +6,8 @@ for( let seat of seats ){
         
          
          // count booking seat 
-         let bookingSeat = getInnerTextNumber('booking-seat');
-         bookingSeat++ 
+        let bookingSeat = getInnerTextNumber('booking-seat');
+        bookingSeat++ 
 
         //  seat validation 
          if( bookingSeat > 4 ){
@@ -15,7 +15,7 @@ for( let seat of seats ){
         }
 
          setInnerTextById('booking-seat', bookingSeat)
-  
+        
         
         // get coupon btn 
         const couponBtn = document.getElementById('coupon-btn');
@@ -40,7 +40,7 @@ for( let seat of seats ){
         const tr = document.createElement('tr');
         tr.classList.add('border-0', '*:py-2');
 
-        // creat td 
+        // create td 
         const td = document.createElement('td');
         const td2 = document.createElement('td');
         const td3 = document.createElement('td');
@@ -70,6 +70,11 @@ for( let seat of seats ){
             // get coupon field value
             const couponField = document.getElementById('coupon-field');
             const couponFieldValue = couponField.value;
+           
+            // if(couponFieldValue !== 'NEW15' || couponFieldValue !== 'Couple 20'){
+            //     return alert('Invalid Coupon');
+            // }
+
             if( couponFieldValue === 'NEW15' ){
                 // 15% discount 
                 const discount = totalPrice * 15 /100;
@@ -88,12 +93,22 @@ for( let seat of seats ){
                 couponContainer.classList.add('hidden');
                 discountContainer.classList.remove('hidden');
             }
-            
         })
 
     })
+    
 }
 
+
+
+
+
+
+
+    
+
+    
+    
 
 
 
