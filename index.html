@@ -346,8 +346,14 @@
                   <p>Total Price</p>
                   <p>BDT <span id="total-price">0</span></p>
                 </div>
-                <div class="relative bg-white rounded-xl"> 
-                  <input class="bg-white pl-1 md:pl-4 py-4 outline-none rounded-xl h-full" type="text" placeholder="Have any coupon?">
+               <div id="discount-container" class="hidden">
+                  <div class="*:text-[#030712] *:font-semibold  text-[15px] flex justify-between">
+                    <p>Discount Price</p>
+                    <p>BDT <span id="discount-price">0</span></p>
+                  </div>
+               </div>
+                <div id="coupon-container" class="relative bg-white rounded-xl"> 
+                  <input id="coupon-field" class="bg-white pl-1 md:pl-4 py-4 outline-none rounded-xl h-full" type="text" placeholder="Have any coupon?">
                   <button id="coupon-btn" class="absolute right-0 md:right-[5px] top-[5px] btn bg-green text-white hover:bg-lime-500 min-h-0 h-10" disabled>Apply</button>
                 </div>
                 <div class="*:text-[#030712] *:font-semibold  text-[15px] flex justify-between">
