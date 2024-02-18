@@ -1,22 +1,42 @@
 const seats = document.getElementsByClassName('seat');
 
 for( let seat of seats ){
+    
     seat.addEventListener('click', function(e){
+        
+         
+         // count booking seat 
+         let bookingSeat = getInnerTextNumber('booking-seat');
+         bookingSeat++ 
 
+        //  seat validation 
+         if( bookingSeat > 4 ){
+            return alert("Can't Buy More Than Four"); 
+        }
+
+         setInnerTextById('booking-seat', bookingSeat)
+
+        
+        
+         if( bookingSeat === 4 ){
+            let couponBtn = document.getElementById('coupon-btn');
+            couponBtn.removeAttribute('disabled', ''); 
+        }
+
+
+        
         // set seat gackground and color
         e.target.style.backgroundColor = '#1DD100';
         e.target.style.color = '#FFFFFF';
+        e.target.setAttribute("disabled", "");
 
          // get rest seat 
          let restSeat = getInnerTextNumber('rest-seat');
          restSeat--
         //  set rest seat 
          setInnerTextById('rest-seat', restSeat)
-         
-         // count booking seat 
-         let booking = getInnerTextNumber('booking');
-         booking++ 
-         setInnerTextById('booking', booking)
+
+
 
         // get seat name 
         const seatName = e.target.innerText;
@@ -38,6 +58,16 @@ for( let seat of seats ){
 
         const seatDetails = document.getElementById('seat-details-container');
         seatDetails.appendChild(tr)
+
+        // set total price 
+        const totalInitialPrice = getInnerTextNumber('total-price')
+        const totalPrice = totalInitialPrice + 550;
+        setInnerTextById('total-price', totalPrice)
+
+        // set grand total 
+        setInnerTextById('grand-total', totalPrice)
+        
+        
 
     })
 }
