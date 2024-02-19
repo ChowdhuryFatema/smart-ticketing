@@ -1,17 +1,18 @@
+
 const seats = document.getElementsByClassName('seat');
 
 for( let seat of seats ){
     
     seat.addEventListener('click', function(e){
         
-         
+
          // count booking seat 
         let bookingSeat = getInnerTextNumber('booking-seat');
         bookingSeat++ 
 
         //  seat validation 
          if( bookingSeat > 4 ){
-            return alert("Can't Buy More Than Four"); 
+            return alert("Can't select more than 4 tickets"); 
         }
 
          setInnerTextById('booking-seat', bookingSeat)
@@ -67,10 +68,10 @@ for( let seat of seats ){
 
         // handle click even 
         couponBtn.addEventListener('click', function(){
+
             // get coupon field value
             const couponField = document.getElementById('coupon-field');
             const couponFieldValue = couponField.value;
-          
 
             if( couponFieldValue === 'NEW15' ){
                 // 15% discount 
@@ -91,11 +92,32 @@ for( let seat of seats ){
                 discountContainer.classList.remove('hidden');
             }
 
+
+        })
+
+        const inputsField = document.getElementsByClassName('input');
+        for(let inputField of inputsField){
+            inputField.removeAttribute('disabled')
+        }
+
+        const phoneNum = document.getElementById('phone-num');
+        phoneNum.addEventListener('keyup', function(){
+            const phoneNumValue = phoneNum.value;
+            if( phoneNumValue.length >= 11 ){
+                const nextBtn = document.getElementById('next-btn');
+                nextBtn.removeAttribute('disabled');
+            }
+            
         })
 
     })
     
 }
+
+
+
+
+
 
 
 
