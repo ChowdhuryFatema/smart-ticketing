@@ -5,7 +5,6 @@ for( let seat of seats ){
     
     seat.addEventListener('click', function(e){
         
-
          // count booking seat 
         let bookingSeat = getInnerTextNumber('booking-seat');
         bookingSeat++ 
@@ -92,12 +91,17 @@ for( let seat of seats ){
                 discountContainer.classList.remove('hidden');
             }
 
-
         })
 
-        const inputsField = document.getElementsByClassName('input');
-        for(let inputField of inputsField){
+        const inputFields = document.getElementsByClassName('input');
+  
+        for(let inputField of inputFields){
+            
             inputField.removeAttribute('disabled')
+            const nextBtn = document.getElementById('next-btn')
+            nextBtn.addEventListener('click', function(){
+            inputField.value = '';
+        })
         }
 
         const phoneNum = document.getElementById('phone-num');
