@@ -57,7 +57,7 @@ for (let seat of seats) {
         // set grand total price 
         calculatePrice('grand-total')
 
-        // anable coupon btn 
+        // enable coupon btn 
         if (bookingSeatCount === 4) {
             couponBtn.removeAttribute('disabled')
         }
@@ -70,11 +70,12 @@ for (let seat of seats) {
 
         }
 
-        // anable next btn 
+        // enable next btn 
         const phoneNum = document.getElementById('number-field');
         phoneNum.addEventListener('keyup', function () {
 
-            const phoneNumValue = phoneNum.value;
+            const phoneNumText = phoneNum.value;
+            const phoneNumValue = parseInt(phoneNum.value);
             if ( !isNaN(phoneNumValue) ) {
                 const nextBtn = document.getElementById('next-btn');
                 nextBtn.removeAttribute('disabled');
