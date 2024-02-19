@@ -73,8 +73,9 @@ for (let seat of seats) {
         // anable next btn 
         const phoneNum = document.getElementById('number-field');
         phoneNum.addEventListener('keyup', function () {
+
             const phoneNumValue = phoneNum.value;
-            if (phoneNumValue.length >= 11) {
+            if ( !isNaN(phoneNumValue) ) {
                 const nextBtn = document.getElementById('next-btn');
                 nextBtn.removeAttribute('disabled');
             }

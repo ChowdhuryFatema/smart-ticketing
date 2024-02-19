@@ -15,11 +15,3 @@ function setInnerTextById(elementId, value) {
 function clearInputValue(elementId){
     document.getElementById(elementId).value = '';
 }
-
-
-        
-    
-
-
-
-
