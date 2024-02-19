@@ -1,9 +1,8 @@
-// get inner text number 
-function getInnerTextNumber(elementId) {
+// calculate Total and Grand total price 
+function calculatePrice(elementId){
     const element = document.getElementById(elementId);
-    const elementText = element.innerText;
-    const elementNum = parseInt(elementText);
-    return elementNum
+    const totalPrice = parseFloat(element.innerText) + 550;
+    element.innerText = totalPrice;
 }
 
 // set inner text value
@@ -12,6 +11,10 @@ function setInnerTextById(elementId, value) {
     element.innerText = value;
 }
 
+
+function clearInputValue(elementId){
+    document.getElementById(elementId).value = '';
+}
 
 
         
